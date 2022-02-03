@@ -1,0 +1,29 @@
+<div class="container">
+  <h1>Colored Boxes:</h1>
+</div>
+
+<div class="container">
+  <div class="sampleDiv" *ngFor="let item of listNumbers" [ngClass]="{blue:true}">{{item}}</div>
+</div>
+
+<div class="container">
+  Paint boxes with random color from list
+</div>
+
+<div class="container">
+  <button (click)="paintBoxes()">Paint</button>
+</div>
+
+<div class="container">
+  Colors for Boxes: {{listColors}}
+</div>
+
+<div class="container">
+  <input type="text" [(ngModel)]="color">
+  <button (click)="handleClick()">Add</button>
+</div>
+
+<div class="container">
+  <p>Color to add:</p>
+  <p [innerHTML]="color"></p>
+</div>
