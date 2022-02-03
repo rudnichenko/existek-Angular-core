@@ -7,6 +7,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 })
 export class AppComponent {
   color:string = 'aqua';
+  rand:number = 0;
 
   listNumbers:Array<string> = ['1', '2', '3'];
   listColors:Array<string> = ['red', 'green', 'blue'];
@@ -17,13 +18,8 @@ export class AppComponent {
     this.listColors.push(this.color);
   }
 
-  paintBoxes() {
-    let rand = this.getRandomIntInclusive(0, this.listColors.length-1);
-    const boxes = document.querySelectorAll('.sampleDiv');
-
-    boxes.forEach(box => {
-      box.setAttribute('style', 'background-color: ' + this.listColors[rand]);
-    });
+  randomColor() {
+    this.rand = this.getRandomIntInclusive(0, this.listColors.length-1);
   }
 
   getRandomIntInclusive(min:number, max:number) {

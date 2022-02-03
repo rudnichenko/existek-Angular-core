@@ -3,7 +3,8 @@
 </div>
 
 <div class="container">
-  <div class="sampleDiv" *ngFor="let item of listNumbers" [ngClass]="{blue:true}">{{item}}</div>
+  <div class="sampleDiv" *ngFor="let item of listNumbers" [ngClass]="{blue:true}" [ngStyle]="{'background-color': listColors[rand]}">
+    {{item}}</div>
 </div>
 
 <div class="container">
@@ -11,7 +12,7 @@
 </div>
 
 <div class="container">
-  <button (click)="paintBoxes()">Paint</button>
+  <button (click)="randomColor()">Paint</button>
 </div>
 
 <div class="container">
