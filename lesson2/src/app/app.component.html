@@ -15,7 +15,9 @@
 </div>
 
 <div class="container">
-  Colors for Boxes: {{listColors}}
+  <span>[</span>
+  <span *ngFor="let color of listColors">{{color}}</span>
+  <span>]</span>
 </div>
 
 <div class="container">
